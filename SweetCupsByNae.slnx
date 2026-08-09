@@ -2,4 +2,5 @@
   <Project Path="SweetCupsByNae.Api/SweetCupsByNae.Api.csproj" />
   <Project Path="SweetCupsByNae.Console/SweetCupsByNae.Console.csproj" />
   <Project Path="SweetCupsByNae.Tests/SweetCupsByNae.Tests.csproj" />
+  <Project Path="SweetCupsByNae.Web/SweetCupsByNae.Web.csproj" />
 </Solution>
