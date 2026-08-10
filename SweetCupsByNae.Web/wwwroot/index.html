@@ -1,70 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Sweet Cups by Nae</title>
 
-    <style>
-        body{
-            margin:0;
-            font-family:Arial, Helvetica, sans-serif;
-            background:#fff8fb;
-            text-align:center;
-        }
-
-        header{
-            padding:40px;
-        }
-
-        img{
-            width:350px;
-            max-width:90%;
-            border-radius:20px;
-            box-shadow:0 10px 20px rgba(0,0,0,.2);
-        }
-
-        h1{
-            color:#d63384;
-            margin-top:20px;
-        }
-
-        p{
-            font-size:20px;
-            color:#666;
-        }
-
-        .button{
-            display:inline-block;
-            margin-top:20px;
-            padding:12px 24px;
-            background:#d63384;
-            color:white;
-            text-decoration:none;
-            border-radius:10px;
-            font-weight:bold;
-        }
-
-        .button:hover{
-            background:#b8246d;
-        }
-    </style>
-
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
 
-<header>
+    <header>
+        <img src="images/logo.png"
+             alt="Sweet Cups by Nae Logo"
+             class="logo">
 
-    <img src="images/logo.png" alt="Sweet Cups by Nae Logo">
+        <h1>Sweet Cups by Nae</h1>
 
-    <h1>Sweet Cups by Nae</h1>
+        <p>Sweetness in Every Cup</p>
+    </header>
 
-    <p>Sweetness in Every Cup</p>
+    <main>
 
-    <a class="button" href="#">View Menu</a>
+        <section class="hero">
+            <h2>Discover Something Sweet</h2>
 
-</header>
+            <p>
+                Explore delicious dessert cups, cupcakes,
+                cakes, cookies, and other sweet treats.
+            </p>
+
+            <button id="loadButton">
+                View Menu
+            </button>
+        </section>
+
+        <section>
+            <div id="products"></div>
+        </section>
+
+    </main>
+
+    <script src="js/app.js"></script>
 
 </body>
 </html>
