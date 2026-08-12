@@ -22,26 +22,200 @@
         <p>Sweetness in Every Cup</p>
     </header>
 
-    <main>
+<main>
 
-        <section class="hero">
-            <h2>Discover Something Sweet</h2>
+    <section class="hero">
+        <h2>Sweetness in Every Cup</h2>
 
-            <p>
-                Explore delicious dessert cups, cupcakes,
-                cakes, cookies, and other sweet treats.
-            </p>
+        <p>
+            Fresh 8 oz cheesecake cups made with love
+            and premium ingredients.
+        </p>
 
-            <button id="loadButton">
-                View Menu
+        <a href="#menu" class="main-button">
+            View Menu
+        </a>
+    </section>
+
+
+    <section class="menu-image-section">
+
+        <img
+            src="images/sweet-cups-menu.png"
+            alt="Sweet Cups by Nae cheesecake cup menu"
+            class="menu-image"
+        >
+
+    </section>
+
+
+    <section id="menu" class="menu-section">
+
+        <h2>Choose Your Cup</h2>
+
+        <div class="product-grid">
+
+            <article class="product-card">
+                <h3>Sweet and Simple</h3>
+
+                <p>
+                    Classic, creamy cheesecake in every bite.
+                </p>
+
+                <span class="price">$5.00</span>
+
+                <button
+                    class="order-button"
+                    data-product="Sweet and Simple"
+                    data-price="5.00">
+                    Add to Order
+                </button>
+            </article>
+
+
+            <article class="product-card">
+                <h3>Oreo Overload</h3>
+
+                <p>
+                    Rich cheesecake with Oreo crumbles
+                    in every layer.
+                </p>
+
+                <span class="price">$6.00</span>
+
+                <button
+                    class="order-button"
+                    data-product="Oreo Overload"
+                    data-price="6.00">
+                    Add to Order
+                </button>
+            </article>
+
+
+            <article class="product-card">
+                <h3>Strawberry Swirl</h3>
+
+                <p>
+                    Creamy cheesecake with sweet
+                    strawberry goodness.
+                </p>
+
+                <span class="price">$6.00</span>
+
+                <button
+                    class="order-button"
+                    data-product="Strawberry Swirl"
+                    data-price="6.00">
+                    Add to Order
+                </button>
+            </article>
+
+
+            <article class="product-card">
+                <h3>Banana Cookie Crunch</h3>
+
+                <p>
+                    Smooth cheesecake, banana pudding,
+                    and vanilla wafers.
+                </p>
+
+                <span class="price">$6.00</span>
+
+                <button
+                    class="order-button"
+                    data-product="Banana Cookie Crunch"
+                    data-price="6.00">
+                    Add to Order
+                </button>
+            </article>
+
+
+            <article class="product-card">
+                <h3>Biscoff Bliss</h3>
+
+                <p>
+                    Creamy cheesecake with Biscoff
+                    spread and cookie crumbs.
+                </p>
+
+                <span class="price">$6.50</span>
+
+                <button
+                    class="order-button"
+                    data-product="Biscoff Bliss"
+                    data-price="6.50">
+                    Add to Order
+                </button>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <section class="bundle-section">
+
+        <h2>Bundle Deals</h2>
+
+        <div class="bundle-grid">
+
+            <button
+                class="bundle-button"
+                data-quantity="2"
+                data-price="11">
+                2 Cups
+                <span>$11</span>
             </button>
-        </section>
 
-        <section>
-            <div id="products"></div>
-        </section>
+            <button
+                class="bundle-button"
+                data-quantity="3"
+                data-price="16">
+                3 Cups
+                <span>$16</span>
+            </button>
 
-    </main>
+            <button
+                class="bundle-button"
+                data-quantity="6"
+                data-price="30">
+                6 Cups
+                <span>$30</span>
+            </button>
+
+            <button
+                class="bundle-button"
+                data-quantity="12"
+                data-price="58">
+                12 Cups
+                <span>$58</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <section class="cart-section">
+
+        <h2>Your Order</h2>
+
+        <div id="cart">
+            <p>Your order is empty.</p>
+        </div>
+
+        <h3>
+            Total:
+            $<span id="cartTotal">0.00</span>
+        </h3>
+
+        <button id="checkoutButton">
+            Continue Order
+        </button>
+
+    </section>
+
+</main>
 
     <script src="js/app.js"></script>
 
