@@ -292,6 +292,15 @@ The project demonstrates how a front-end application can collect customer inform
 
 ---
 
-## Developer
+## Author
+
+**Theophilus Abner**
+
+- GitHub: [tabner0320](https://github.com/tabner0320)
+- Repository: [SweetCupsByNae](https://github.com/tabner0320/SweetCupsByNae)
+
+---
+
+## 👨‍💻 Developer
 
 Developed as a full-stack software development project using **C#, ASP.NET Core, JavaScript, HTML, and CSS**.
