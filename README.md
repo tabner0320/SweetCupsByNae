@@ -1,4 +1,4 @@
-# 🍰 Sweet Cups by Nae
+# Sweet Cups by Nae
 
 **Sweet Cups by Nae** is a full-stack ordering application for a cheesecake cup business. Customers can browse cheesecake flavors, add individual cups or bundle deals to their order, view their cart total, enter pickup information, and submit their order to an ASP.NET Core Web API.
 
@@ -6,7 +6,7 @@ This project demonstrates front-end development, REST API development, JavaScrip
 
 ---
 
-## ✨ Features
+## Features
 
 - Responsive Sweet Cups by Nae website
 - Digital cheesecake cup menu
@@ -28,7 +28,7 @@ This project demonstrates front-end development, REST API development, JavaScrip
 
 ---
 
-## 🍓 Menu
+## Menu
 
 | Cheesecake Cup | Price |
 |---|---:|
@@ -49,7 +49,7 @@ This project demonstrates front-end development, REST API development, JavaScrip
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 | Category | Technology |
 |---|---|
@@ -63,7 +63,7 @@ This project demonstrates front-end development, REST API development, JavaScrip
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 SweetCupsByNae/
@@ -93,7 +93,7 @@ SweetCupsByNae/
 
 ---
 
-## 🛒 How the Ordering System Works
+## How the Ordering System Works
 
 The customer begins by selecting an individual cheesecake cup or a bundle deal.
 
@@ -119,7 +119,7 @@ The order is converted to JSON and sent to the ASP.NET Core API using an HTTP `P
 
 ---
 
-## 🌐 API Endpoints
+## API Endpoints
 
 ### Check API
 
@@ -186,7 +186,7 @@ Example request:
 
 ---
 
-## ▶️ Running the Application
+## Running the Application
 
 Clone the repository:
 
@@ -236,7 +236,7 @@ Open that address in your browser.
 
 ---
 
-## ⚠️ Development Configuration
+## Development Configuration
 
 The JavaScript front end currently communicates with the API using a localhost address in:
 
@@ -256,7 +256,7 @@ When the application is deployed, this URL should be changed to the deployed API
 
 ---
 
-## 💾 Current Data Storage
+## Current Data Storage
 
 Orders are currently stored **in memory** by the ASP.NET Core API.
 
@@ -266,7 +266,7 @@ Persistent database storage is planned as a future enhancement.
 
 ---
 
-## 🚀 Future Improvements
+## Future Improvements
 
 Potential improvements include:
 
@@ -284,7 +284,7 @@ Potential improvements include:
 
 ---
 
-## 🎯 Project Purpose
+## Project Purpose
 
 Sweet Cups by Nae was created to practice building a full-stack application using C#, ASP.NET Core, HTML, CSS, and JavaScript.
 
@@ -292,6 +292,6 @@ The project demonstrates how a front-end application can collect customer inform
 
 ---
 
-## 👨‍💻 Developer
+## Developer
 
 Developed as a full-stack software development project using **C#, ASP.NET Core, JavaScript, HTML, and CSS**.
