@@ -198,22 +198,84 @@
 
     <section class="cart-section">
 
-        <h2>Your Order</h2>
+    <h2>Your Order</h2>
 
-        <div id="cart">
-            <p>Your order is empty.</p>
-        </div>
+    <div id="cart">
+        <p>Your order is empty.</p>
+    </div>
 
-        <h3>
-            Total:
-            $<span id="cartTotal">0.00</span>
-        </h3>
+    <h3>
+        Total:
+        $<span id="cartTotal">0.00</span>
+    </h3>
 
-        <button id="checkoutButton">
-            Continue Order
+    <button id="checkoutButton">
+        Continue Order
+    </button>
+
+</section>
+
+
+<!-- Customer Order Form -->
+<section id="orderFormSection"
+         class="order-form-section"
+         hidden>
+
+    <h2>Complete Your Order</h2>
+
+    <form id="orderForm">
+
+        <label for="customerName">
+            Name
+        </label>
+
+        <input
+            type="text"
+            id="customerName"
+            required
+        >
+
+
+        <label for="customerPhone">
+            Phone Number
+        </label>
+
+        <input
+            type="tel"
+            id="customerPhone"
+            required
+        >
+
+
+        <label for="pickupDate">
+            Pickup Date
+        </label>
+
+        <input
+            type="date"
+            id="pickupDate"
+            required
+        >
+
+
+        <label for="orderNotes">
+            Order Notes
+        </label>
+
+        <textarea
+            id="orderNotes"
+            rows="4"
+            placeholder="Flavor choices, special requests, etc."
+        ></textarea>
+
+
+        <button type="submit">
+            Submit Order
         </button>
 
-    </section>
+    </form>
+
+</section>
 
 </main>
 
