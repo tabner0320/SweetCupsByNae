@@ -32,3 +32,95 @@ button {
 button:hover {
     background-color: #b52a6d;
 }
+
+/* =========================================
+   WELCOME / SPLASH SCREEN
+========================================= */
+
+.welcome-screen {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+
+    background: #000;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    z-index: 9999;
+
+    overflow-y: auto;
+}
+
+.welcome-logo {
+    display: block;
+
+    width: min(85vw, 700px);
+    max-height: 80vh;
+
+    object-fit: contain;
+
+    margin: 0 auto 20px;
+}
+
+.enter-site-button {
+    background: #ff4f87;
+    color: #ffffff;
+
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+
+    padding: 14px 40px;
+
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 0 20px rgba(255, 79, 135, 0.6);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.enter-site-button:hover {
+    transform: scale(1.05);
+
+    box-shadow: 0 0 30px rgba(255, 79, 135, 0.9);
+}
+
+
+/* Hide main website until Enter Site is clicked */
+
+.hidden {
+    display: none;
+}
+
+
+/* Main website */
+
+.website-content {
+    width: 100%;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .welcome-logo {
+        width: 95%;
+        max-height: 75vh;
+    }
+
+    .enter-site-button {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}

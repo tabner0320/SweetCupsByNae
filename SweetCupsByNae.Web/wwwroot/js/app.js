@@ -1,3 +1,28 @@
+// ==========================================
+// Welcome Screen
+// ==========================================
+
+const welcomeScreen = document.getElementById("welcomeScreen");
+const websiteContent = document.getElementById("websiteContent");
+const enterSiteButton = document.getElementById("enterSiteButton");
+
+if (enterSiteButton) {
+    enterSiteButton.addEventListener("click", () => {
+        welcomeScreen.style.display = "none";
+        websiteContent.classList.remove("hidden");
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+}
+
+
+// ==========================================
+// Shopping Cart
+// ==========================================
+
 const cart = [];
 
 const orderButtons = document.querySelectorAll(".order-button");
@@ -10,6 +35,10 @@ const checkoutButton = document.getElementById("checkoutButton");
 const orderFormSection = document.getElementById("orderFormSection");
 const orderForm = document.getElementById("orderForm");
 
+
+// ==========================================
+// Individual Products
+// ==========================================
 
 orderButtons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -26,6 +55,10 @@ orderButtons.forEach((button) => {
 });
 
 
+// ==========================================
+// Bundle Deals
+// ==========================================
+
 bundleButtons.forEach((button) => {
     button.addEventListener("click", () => {
         const quantity = Number(button.dataset.quantity);
@@ -40,6 +73,10 @@ bundleButtons.forEach((button) => {
     });
 });
 
+
+// ==========================================
+// Display Cart
+// ==========================================
 
 function displayCart() {
     cartElement.innerHTML = "";
@@ -58,7 +95,10 @@ function displayCart() {
                 ${item.product} - $${item.price.toFixed(2)}
             </span>
 
-            <button type="button" onclick="removeItem(${index})">
+            <button
+                type="button"
+                onclick="removeItem(${index})"
+            >
                 Remove
             </button>
         `;
@@ -76,12 +116,20 @@ function displayCart() {
 }
 
 
+// ==========================================
+// Remove Cart Item
+// ==========================================
+
 function removeItem(index) {
     cart.splice(index, 1);
 
     displayCart();
 }
 
+
+// ==========================================
+// Continue Order
+// ==========================================
 
 checkoutButton.addEventListener("click", () => {
     if (cart.length === 0) {
@@ -96,6 +144,10 @@ checkoutButton.addEventListener("click", () => {
     });
 });
 
+
+// ==========================================
+// Submit Order
+// ==========================================
 
 orderForm.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -163,5 +215,10 @@ orderForm.addEventListener("submit", async (event) => {
         );
     }
 });
+
+
+// ==========================================
+// Initial Cart Display
+// ==========================================
 
 displayCart();
