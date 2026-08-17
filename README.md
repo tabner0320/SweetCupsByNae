@@ -301,6 +301,6 @@ The project demonstrates how a front-end application can collect customer inform
 
 ---
 
-## 👨‍💻 Developer
+## Developer
 
 Developed as a full-stack software development project using **C#, ASP.NET Core, JavaScript, HTML, and CSS**.
