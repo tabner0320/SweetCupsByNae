@@ -1,30 +1,58 @@
 # Sweet Cups by Nae
 
-**Sweet Cups by Nae** is a full-stack ordering application for a cheesecake cup business. Customers can browse cheesecake flavors, add individual cups or bundle deals to their order, view their cart total, enter pickup information, and submit their order to an ASP.NET Core Web API.
+Sweet Cups by Nae is a full-stack ordering application designed for a cheesecake cup business. Customers can enter through a branded welcome screen, browse cheesecake flavors and bundle deals, add items to an interactive shopping cart, calculate their order total, and submit pickup information through an ASP.NET Core backend.
 
-This project demonstrates front-end development, REST API development, JavaScript interactivity, JSON, and communication between a JavaScript front end and a C# API.
+This project demonstrates practical full-stack development using **C#, ASP.NET Core, JavaScript, HTML5, CSS3, REST APIs, and JSON**.
 
 ---
 
 ## Features
 
-- Responsive Sweet Cups by Nae website
-- Digital cheesecake cup menu
-- Individual cheesecake flavor selection
-- Bundle deal selection
-- Interactive shopping cart
+- Branded welcome splash screen with an **Enter Site** experience
+- Responsive cheesecake cup menu
+- Individual product ordering
+- Bundle deal selections
+- Interactive JavaScript shopping cart
 - Automatic order total calculation
-- Remove items from the cart
-- Customer checkout form
-- Customer name and phone number collection
+- Remove items from an order
+- Checkout and customer information form
 - Pickup date selection
 - Special order notes
-- JavaScript `fetch()` API communication
-- ASP.NET Core Minimal API
-- Create orders using an HTTP POST request
-- View submitted orders using an HTTP GET request
-- Automatic order ID generation
-- CORS configuration for communication between the website and API
+- REST API order submission
+- JSON-based client/server communication
+- Responsive design for desktop and mobile devices
+
+---
+
+## Application Experience
+
+When the website opens, customers are greeted with a branded **Sweet Cups by Nae** welcome screen.
+
+After selecting **Enter Site**, customers can browse the menu, choose individual cheesecake cups or bundle deals, build their order, and continue to checkout.
+
+### Customer Order Flow
+
+```text
+Welcome Screen
+      ↓
+Enter Site
+      ↓
+Browse Menu
+      ↓
+Choose Products or Bundles
+      ↓
+Add Items to Cart
+      ↓
+Review Order & Total
+      ↓
+Continue Order
+      ↓
+Enter Customer Information
+      ↓
+Submit Order
+      ↓
+ASP.NET Core API
+```
 
 ---
 
@@ -38,7 +66,9 @@ This project demonstrates front-end development, REST API development, JavaScrip
 | Banana Cookie Crunch | $6.00 |
 | Biscoff Bliss | $6.50 |
 
-### Bundle Deals
+---
+
+## Bundle Deals
 
 | Bundle | Price |
 |---|---:|
@@ -49,17 +79,72 @@ This project demonstrates front-end development, REST API development, JavaScrip
 
 ---
 
+## Shopping Cart
+
+The shopping cart is built with vanilla JavaScript and updates dynamically as customers make selections.
+
+Customers can:
+
+- Add individual cheesecake cups
+- Add bundle deals
+- View selected products
+- Remove items from the cart
+- See the order total update automatically
+- Continue to the checkout form
+
+The cart does not require the page to reload when products are added or removed.
+
+---
+
+## Order Form
+
+After selecting **Continue Order**, the customer can provide:
+
+- Name
+- Phone number
+- Pickup date
+- Order notes or special requests
+
+The completed order is converted to JSON and submitted to the backend API using JavaScript's Fetch API.
+
+---
+
 ## Technologies Used
 
 | Category | Technology |
 |---|---|
 | Language | C# |
-| Framework | ASP.NET Core / .NET |
-| Front End | HTML5, CSS3, JavaScript |
-| Back End | ASP.NET Core Minimal API |
-| API Communication | Fetch API / JSON |
+| Framework | ASP.NET Core |
+| Frontend | HTML5, CSS3, JavaScript |
+| API | REST API |
+| API Communication | Fetch API |
+| Data Format | JSON |
+| Styling | Custom CSS |
 | Version Control | Git & GitHub |
 | Development Environment | Visual Studio Code |
+| Command Line | Git Bash / .NET CLI |
+
+---
+
+## Technical Concepts
+
+This project demonstrates:
+
+- Full-stack web development
+- ASP.NET Core application development
+- REST API integration
+- JavaScript event listeners
+- DOM manipulation
+- Fetch API requests
+- JSON serialization
+- Asynchronous JavaScript
+- Shopping cart state management
+- Dynamic total calculations
+- HTML form handling
+- Client/server communication
+- Responsive web design
+- Static file hosting with ASP.NET Core
+- Git and GitHub version control
 
 ---
 
@@ -68,239 +153,195 @@ This project demonstrates front-end development, REST API development, JavaScrip
 ```text
 SweetCupsByNae/
 │
-├── SweetCupsByNae.Api/
-│   ├── Models/
-│   │   └── Order.cs
-│   ├── Program.cs
-│   └── SweetCupsByNae.Api.csproj
-│
 ├── SweetCupsByNae.Web/
-│   ├── wwwroot/
-│   │   ├── css/
-│   │   │   └── style.css
-│   │   ├── images/
-│   │   │   ├── logo.png
-│   │   │   └── sweet-cups-menu.png
-│   │   ├── js/
-│   │   │   └── app.js
-│   │   └── index.html
 │   │
 │   ├── Program.cs
-│   └── SweetCupsByNae.Web.csproj
+│   │
+│   └── wwwroot/
+│       │
+│       ├── index.html
+│       │
+│       ├── css/
+│       │   └── style.css
+│       │
+│       ├── js/
+│       │   └── app.js
+│       │
+│       └── images/
+│           ├── logo.png
+│           ├── sweet-cups-menu.png
+│           └── sweet-cups-welcome.png
 │
 └── README.md
 ```
 
 ---
 
-## How the Ordering System Works
+## Frontend
 
-The customer begins by selecting an individual cheesecake cup or a bundle deal.
+The frontend is built with **HTML5, CSS3, and vanilla JavaScript**.
 
-```text
-Choose a Cup
-     ↓
-Add to Order
-     ↓
-Shopping Cart
-     ↓
-Continue Order
-     ↓
-Customer Information
-     ↓
-Submit Order
-     ↓
-ASP.NET Core API
-```
+### HTML
 
-JavaScript creates an order object containing the customer's information and selected products.
+`index.html` provides the structure for:
 
-The order is converted to JSON and sent to the ASP.NET Core API using an HTTP `POST` request.
+- Welcome screen
+- Header
+- Hero section
+- Menu
+- Product cards
+- Bundle deals
+- Shopping cart
+- Customer order form
 
----
+### CSS
 
-## API Endpoints
+`style.css` handles:
 
-### Check API
+- Page layout
+- Brand styling
+- Welcome splash screen
+- Buttons
+- Product presentation
+- Responsive behavior
+- Mobile layout
 
-```http
-GET /
-```
+### JavaScript
 
-Returns a message confirming that the Sweet Cups by Nae API is running.
+`app.js` handles:
 
----
-
-### View All Orders
-
-```http
-GET /api/orders
-```
-
-Returns all orders currently stored by the API.
+- Welcome screen interaction
+- Product selection
+- Bundle selection
+- Shopping cart management
+- Removing cart items
+- Order total calculations
+- Checkout behavior
+- Form submission
+- API communication
 
 ---
 
-### View Order by ID
+## Backend
 
-```http
-GET /api/orders/{id}
-```
+The application uses **ASP.NET Core** to host the website and support backend functionality.
 
-Returns a specific order.
+The frontend prepares customer order information as JSON and sends it to the order API.
 
 Example:
 
-```http
-GET /api/orders/1
-```
-
----
-
-### Create an Order
-
-```http
-POST /api/orders
-```
-
-Example request:
-
-```json
-{
-  "customerName": "Customer Name",
-  "customerPhone": "555-555-5555",
-  "pickupDate": "2026-08-15",
-  "orderNotes": "Please have the order ready after 3 PM.",
-  "items": [
+```javascript
+const response = await fetch(
+    "http://localhost:5142/api/orders",
     {
-      "product": "Sweet and Simple",
-      "price": 5.00
-    },
-    {
-      "product": "Oreo Overload",
-      "price": 6.00
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(order)
     }
-  ]
-}
+);
 ```
+
+> **Development Note:** The API currently uses a localhost address during development. A deployed version of the application would use the URL of the deployed backend API.
 
 ---
 
 ## Running the Application
 
-Clone the repository:
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/tabner0320/SweetCupsByNae.git
 ```
 
-Navigate into the project:
+### 2. Navigate to the repository
 
 ```bash
 cd SweetCupsByNae
 ```
 
-### Start the API
-
-Open a terminal and run:
+### 3. Restore the .NET dependencies
 
 ```bash
-dotnet run --project SweetCupsByNae.Api
+dotnet restore
 ```
 
-The terminal will display the API address:
-
-```text
-Now listening on: http://localhost:PORT
-```
-
-Keep this terminal running.
-
----
-
-### Start the Website
-
-Open a second terminal and run:
+### 4. Run the web application
 
 ```bash
 dotnet run --project SweetCupsByNae.Web
 ```
 
-The terminal will display the website address:
+ASP.NET Core will display the local development URL in the terminal.
+
+Example:
 
 ```text
-Now listening on: http://localhost:PORT
+Now listening on: http://localhost:5027
 ```
 
-Open that address in your browser.
+Open the URL displayed by your terminal in a web browser.
 
 ---
 
-## Development Configuration
+## Current Development Status
 
-The JavaScript front end currently communicates with the API using a localhost address in:
+The application currently includes the core customer ordering experience:
 
-```text
-SweetCupsByNae.Web/wwwroot/js/app.js
-```
+- Welcome screen
+- Product menu
+- Bundle selections
+- Shopping cart
+- Automatic totals
+- Checkout form
+- Order submission logic
 
-For example:
-
-```javascript
-"http://localhost:5142/api/orders"
-```
-
-The port must match the port being used by `SweetCupsByNae.Api`.
-
-When the application is deployed, this URL should be changed to the deployed API address.
-
----
-
-## Current Data Storage
-
-Orders are currently stored **in memory** by the ASP.NET Core API.
-
-This means submitted orders are available while the API is running, but they are deleted when the API is stopped or restarted.
-
-Persistent database storage is planned as a future enhancement.
+Additional backend and deployment features can be added as the project continues to grow.
 
 ---
 
 ## Future Improvements
 
-Potential improvements include:
+Planned or potential improvements include:
 
-- SQL database integration
-- Entity Framework Core
-- Persistent order storage
-- Order status tracking
-- Admin order management dashboard
-- Customer order confirmation
+- Persistent database storage
+- Administrative order dashboard
+- Customer order confirmation page
 - Email or text notifications
-- Improved checkout validation
-- Mobile UI improvements
-- Deployment of the Web application and API
-- Automated API and integration tests
+- Online payment processing
+- Quantity controls
+- Custom flavor selections for bundles
+- Order status tracking
+- Enhanced form validation
+- Administrative authentication
+- Cloud deployment
+
+---
+
+## Skills Demonstrated
+
+`C#` `ASP.NET Core` `JavaScript` `HTML5` `CSS3` `REST APIs` `Fetch API` `JSON` `DOM Manipulation` `Responsive Web Design` `Git` `GitHub`
 
 ---
 
 ## Project Purpose
 
-Sweet Cups by Nae was created to practice building a full-stack application using C#, ASP.NET Core, HTML, CSS, and JavaScript.
+Sweet Cups by Nae was created as a practical full-stack development project centered around a real-world small-business ordering experience.
 
-The project demonstrates how a front-end application can collect customer information, create structured JSON data, and communicate with a REST API using asynchronous JavaScript.
+The project demonstrates how a JavaScript frontend can interact with an ASP.NET Core backend to create an application where customers can browse products, build an order, calculate totals, provide pickup information, and submit order data through a REST API.
+
+---
+
+## Repository
+
+**GitHub:**  
+https://github.com/tabner0320/SweetCupsByNae
 
 ---
 
 ## Author
 
-**Theophilus Abner**
+**Theophilus M. Abner Jr.**
 
-- GitHub: [tabner0320](https://github.com/tabner0320)
-- Repository: [SweetCupsByNae](https://github.com/tabner0320/SweetCupsByNae)
-
----
-
-## Developer
-
-Developed as a full-stack software development project using **C#, ASP.NET Core, JavaScript, HTML, and CSS**.
+Software Development and IT professional focused on building practical applications with **C#, .NET, ASP.NET Core, JavaScript, REST APIs, cloud technologies, and automation**.
